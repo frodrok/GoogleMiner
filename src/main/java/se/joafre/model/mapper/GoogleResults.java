@@ -1,4 +1,4 @@
-package se.joafre;
+package se.joafre.model.mapper;
 
 import java.util.List;
 
@@ -9,14 +9,14 @@ public class GoogleResults {
     public void setResponseData(ResponseData responseData) { this.responseData = responseData; }
     public String toString() { return "ResponseData[" + responseData + "]"; }
 
-    static class ResponseData {
+    public static class ResponseData {
         private List<Result> results;
         public List<Result> getResults() { return results; }
         public void setResults(List<Result> results) { this.results = results; }
         public String toString() { return "Results[" + results + "]"; }
     }
 
-    static class Result {
+    public static class Result {
         private String url;
         private String title;
         public String getUrl() { return url; }

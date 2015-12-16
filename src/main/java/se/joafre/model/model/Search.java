@@ -1,4 +1,4 @@
-package se.joafre.model;
+package se.joafre.model.model;
 
 import javax.persistence.*;
 import java.util.Collection;
@@ -11,21 +11,18 @@ public class Search {
     @GeneratedValue
     private Long search_id;
 
-    @Column(nullable = false)
+    @Column
     private String searchQuery;
 
-    @Column(nullable = false)
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "search_id")
-    private Collection<SearchResult> results = new HashSet();
-
-
-
+    private Collection<SearchResult> results;
 
     protected Search() {}
 
     public Search(String searchQuery) {
         this.searchQuery = searchQuery;
+        this.results = new HashSet<>();
     }
 
     public Long getSearch_id() {
@@ -36,13 +33,12 @@ public class Search {
         return searchQuery;
     }
 
-    public Collection<SearchResult> getResults() {
-        return new HashSet<SearchResult>(results);
+    public Search addResult(SearchResult result) {
+        this.results.add(result);
+        return this;
     }
 
-
-
-    public void addResult(SearchResult result) {
-        this.results.add(result);
+    public Collection<SearchResult> getResults() {
+        return new HashSet<>(results);
     }
 }
