@@ -1,4 +1,4 @@
-package se.joafre.model.mapper;
+package se.joafre.mapper;
 
 import java.util.List;
 

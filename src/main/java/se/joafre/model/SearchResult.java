@@ -1,4 +1,4 @@
-package se.joafre.model.model;
+package se.joafre.model;
 
 import javax.persistence.*;
 

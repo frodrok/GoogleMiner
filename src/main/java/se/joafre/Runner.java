@@ -1,10 +1,10 @@
-package se.joafre.model;
+package se.joafre;
 
 import com.google.gson.Gson;
-import se.joafre.model.mapper.GoogleResults;
-import se.joafre.model.model.Search;
-import se.joafre.model.model.SearchResult;
-import se.joafre.model.repo.SearchRepository;
+import se.joafre.mapper.GoogleResults;
+import se.joafre.model.Search;
+import se.joafre.model.SearchResult;
+import se.joafre.repo.SearchRepository;
 
 import java.io.InputStreamReader;
 import java.io.Reader;

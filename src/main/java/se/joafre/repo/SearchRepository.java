@@ -1,6 +1,6 @@
-package se.joafre.model.repo;
+package se.joafre.repo;
 
-import se.joafre.model.model.Search;
+import se.joafre.model.Search;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
